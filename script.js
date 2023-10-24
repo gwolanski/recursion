@@ -1,10 +1,10 @@
 //Fibonacci warmup - iteration & recursion
-function fibs(number) {
+function fibs(n) {
     let fibArray = [];
     let a = 0;
     let b = 1;
   
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < n; i++) {
         fibArray.push(a);
         let temp = a;
         a = b;
@@ -13,8 +13,8 @@ function fibs(number) {
     console.log(fibArray);
 }
 
-function fibsRec(number, a = 0, b = 1 , fibArray = []) {    
-    if (number == 0) {
+function fibsRec(n, a = 0, b = 1 , fibArray = []) {    
+    if (n == 0) {
         return fibArray;
     } 
 
@@ -24,9 +24,7 @@ function fibsRec(number, a = 0, b = 1 , fibArray = []) {
 
 
 //merge sort
-
 function mergeSort(listArray) {
-    //base case
     if (listArray.length <= 1) {
         return listArray;
     }
@@ -64,6 +62,7 @@ function merge(left, right) {
     return result.concat(left.slice(leftIndex), right.slice(rightIndex));
 }
 
-let unsortedArray = [9, 2, 5, 1, 3, 15, 2, 7];
-let sortedArray = mergeSort(unsortedArray);
-console.log(sortedArray);
+//mergeSort and merge tester
+// let unsortedArray = [9, 2, 5, 1, 3, 15, 2, 7];
+// let sortedArray = mergeSort(unsortedArray);
+// console.log(sortedArray);
